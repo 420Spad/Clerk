@@ -43,7 +43,7 @@ if (php_sapi_name() == "cli") {
 
 
 // Errors/Exceptions
-class Error extends Exception {
+class MalError extends Exception {
     public $obj = null;
     public function __construct($obj) {
         parent::__construct("Mal Error", 0, null);
@@ -542,7 +542,7 @@ class Env {
 
 
 // Error/Exception functions
-function mal_throw($obj) { throw new Error($obj); }
+function mal_throw($obj) { throw new MalError($obj); }
 
 
 // String functions
