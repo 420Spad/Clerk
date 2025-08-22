@@ -1,1 +1,2 @@
-mal.php
+<?php
+require __DIR__ . '/mal.php';
